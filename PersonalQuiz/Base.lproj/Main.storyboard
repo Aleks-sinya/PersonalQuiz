@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -263,13 +263,7 @@
                             <constraint firstItem="8ev-6o-C3P" firstAttribute="leading" secondItem="HXM-qn-oKJ" secondAttribute="leading" id="yqu-XX-MnI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="hn7-PL-Yyn">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="fac-kx-2yb">
-                            <connections>
-                                <segue destination="wpt-M7-7py" kind="show" id="4c1-Hj-NU5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="hn7-PL-Yyn"/>
                     <connections>
                         <outlet property="multipleStackView" destination="zCJ-nc-GlC" id="acD-cC-yke"/>
                         <outlet property="questionLabel" destination="Tid-3h-Zg1" id="4kG-ba-YN5"/>
@@ -368,9 +362,6 @@
             <point key="canvasLocation" x="727.5" y="96.126760563380287"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="SPY-qF-XGF"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

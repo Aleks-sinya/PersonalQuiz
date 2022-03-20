@@ -14,41 +14,53 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var descriptionAnimalLabel: UILabel!
     
     // MARK: - Private properties
-    private var currentAnswers: [Answer]!
-    private var presentAnswer: () = ()
+    var answers: [Answer]!
     
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        updateResult()
+    }
+    
+    // MARK: - Private Methods
+    private func updateResult() {
         
-        presentAnswer = getAnswer(for: currentAnswers)
+        /*
+        var frequencyOfAnimals: [Animal: Int] = [:]
+        let animals = answers.map { $0.animal }
+         */
         
-        resultAnimalLabel.text = getAnimal(for: presentAnswer)
-        descriptionAnimalLabel.text = getDescription(for: presentAnswer)
+        /*
+        for animal in animals {
+            if let animalTypeCount = frequencyOfAnimals[animal] {
+                frequencyOfAnimals.updateValue(animalTypeCount + 1, forKey: animal)
+            } else {
+                frequencyOfAnimals[animal] = 1
+            }
+        }
+         */
+        
+        /*
+         for animal in animals {
+         frequencyOfAnimals[animal] = (frequencyOfAnimals[animal] ?? 0) + 1
+         }
+         
+         let sortedFrequencyOfAnimals = frequencyOfAnimals.sorted { $0.value > $1.value }
+         guard let mostFrequencyAnimal = sortedFrequencyOfAnimals.first?.key else { return }
+         */
+        
+        // Решение в одну строку:
+        let mostFrequencyAnimal = Dictionary(grouping: answers) { $0.animal }
+            .sorted { $0.value.count > $1.value.count }
+            .first?.key
+        
+        updateUI(with: mostFrequencyAnimal)
     }
     
-    // MARK: - Get Animal
-    private func getAnimal(for answer: Dictionary<Animal, Character>.Element) -> String {
-        let animal = answer.key.definition
-        return String("Вы – \(animal)")
+    private func updateUI(with animal: Animal?) {
+        resultAnimalLabel.text = "Вы - \(animal?.rawValue ?? "🐶")!"
+        descriptionAnimalLabel.text = animal?.definition ?? ""
     }
-    
-    // MARK: - Get Description
-    private func getDescription(for answer: Dictionary<Animal, String>.Element) -> String {
-        let description = answer.key.definition
-        return description
-    }
-}
-
-    // MARK: - Get Answer
-
-private func getAnswer(for allAnswers: [Answer]) {
-    
-    var animalsType: [Animal: Int]
-    for answer in allAnswers {
-        animalsType[answer.animal]? += 1
-    }
-    guard animalsType.sorted(by: {$0.1 < $1.1 }).first != nil else { return }
 }

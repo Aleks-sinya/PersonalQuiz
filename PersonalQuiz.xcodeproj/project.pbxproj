@@ -16,7 +16,6 @@
 		A197110A27DDEFA200880014 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A197110927DDEFA200880014 /* Question.swift */; };
 		A1F9D15F27E03C450016E8B6 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D15E27E03C450016E8B6 /* QuestionsViewController.swift */; };
 		A1F9D16127E03C580016E8B6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D16027E03C580016E8B6 /* ResultViewController.swift */; };
-		A1F9D16327E0BECD0016E8B6 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D16227E0BECD0016E8B6 /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		A197110927DDEFA200880014 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A1F9D15E27E03C450016E8B6 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		A1F9D16027E03C580016E8B6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		A1F9D16227E0BECD0016E8B6 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				A197110927DDEFA200880014 /* Question.swift */,
-				A1F9D16227E0BECD0016E8B6 /* Animal.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -194,7 +191,6 @@
 				A1F9D15F27E03C450016E8B6 /* QuestionsViewController.swift in Sources */,
 				A197110A27DDEFA200880014 /* Question.swift in Sources */,
 				A19710F127DDD7EA00880014 /* AppDelegate.swift in Sources */,
-				A1F9D16327E0BECD0016E8B6 /* Animal.swift in Sources */,
 				A19710F327DDD7EA00880014 /* SceneDelegate.swift in Sources */,
 				A1F9D16127E03C580016E8B6 /* ResultViewController.swift in Sources */,
 			);
